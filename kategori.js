@@ -97,11 +97,8 @@ function toggleFilters(e) {
 
   const willOpen = !filterOverlay.classList.contains("active");
 
-  if (willOpen) {
-    openFilters();
-  } else {
-    closeFilters();
-  }
+  if (willOpen) openFilters();
+  else closeFilters();
 }
 
 function updateAgeValue() {
@@ -178,54 +175,24 @@ function getFilteredCreators() {
     const creatorHairType = (creator.hair?.type ?? "").toLowerCase();
     const creatorCity = (creator.address?.city ?? "").toLowerCase();
 
-    const matchesType =
-      selectedTypes.length === 0 ||
-      selectedTypes.some((type) => creatorTypes.includes(type));
-
-    const matchesGender =
-      selectedGenders.length === 0 || selectedGenders.includes(creatorGender);
-
-    const matchesAge = creator.age <= maxAge;
-    const matchesHeight = creator.height <= maxHeight;
-    const matchesWeight = maxWeight === null || creator.weight <= maxWeight;
-
-    const matchesHairColor =
-      !selectedHairColor || creatorHairColor.includes(selectedHairColor);
-
-    const matchesEyeColor =
-      !selectedEyeColor || creatorEyeColor.includes(selectedEyeColor);
-
-    const matchesHairType =
-      !selectedHairType || creatorHairType.includes(selectedHairType);
-
-    const matchesLocation =
-      !locationSearch || creatorCity.includes(locationSearch);
-
     return (
-      matchesType &&
-      matchesGender &&
-      matchesAge &&
-      matchesHeight &&
-      matchesWeight &&
-      matchesHairColor &&
-      matchesEyeColor &&
-      matchesHairType &&
-      matchesLocation
+      (selectedTypes.length === 0 ||
+        selectedTypes.some((type) => creatorTypes.includes(type))) &&
+      (selectedGenders.length === 0 ||
+        selectedGenders.includes(creatorGender)) &&
+      creator.age <= maxAge &&
+      creator.height <= maxHeight &&
+      (maxWeight === null || creator.weight <= maxWeight) &&
+      (!selectedHairColor || creatorHairColor.includes(selectedHairColor)) &&
+      (!selectedEyeColor || creatorEyeColor.includes(selectedEyeColor)) &&
+      (!selectedHairType || creatorHairType.includes(selectedHairType)) &&
+      (!locationSearch || creatorCity.includes(locationSearch))
     );
   });
 }
 
 function showCreators(creators) {
   if (!listEl) return;
-
-  if (!creators.length) {
-    listEl.innerHTML = `
-      <div class="empty-state">
-        No creators match your filters.
-      </div>
-    `;
-    return;
-  }
 
   listEl.innerHTML = creators.map(renderCreatorCard).join("");
 }
@@ -235,19 +202,13 @@ function renderCreatorCard(creator) {
   const typeLabel = formatTypeLabel(creator.talentTypes);
 
   return `
-    <article class="creator-card" data-id="${creator.id}">
-      <img
-        src="${creator.localImage}"
-        alt="${escapeHtml(fullName)}"
-        loading="lazy"
-      />
-
-      <div class="card-overlay">
-        <h3 class="card-name">${escapeHtml(fullName)}</h3>
-        <p class="card-type">${escapeHtml(typeLabel)}</p>
-      </div>
-    </article>
-  `;
+<a href="profil.html?id=${creator.id}" class="creator-card" data-id="${creator.id}">
+  <img src="${creator.localImage}" alt="${escapeHtml(fullName)}">
+  <div class="card-overlay">
+    <h3 class="card-name">${escapeHtml(fullName)}</h3>
+    <p class="card-type">${escapeHtml(typeLabel)}</p>
+  </div>
+</a>`;
 }
 
 function renderTopSelectors(creators) {
@@ -257,39 +218,32 @@ function renderTopSelectors(creators) {
     creators.find((creator) => creator.id === id),
   ).filter(Boolean);
 
-  topSelectorsEl.innerHTML = items.map(renderTopSelectorCard).join("");
-}
-
-function renderTopSelectorCard(creator) {
-  const fullName = creatorFullName(creator);
-
-  return `
-    <article class="top-card" data-id="${creator.id}">
-      <img
-        src="${creator.localImage}"
-        alt="${escapeHtml(fullName)}"
-        loading="lazy"
-      />
-    </article>
-  `;
+  topSelectorsEl.innerHTML = items
+    .map(
+      (creator) => `
+<a href="profil.html?id=${creator.id}" class="top-card">
+<img src="${creator.localImage}">
+</a>`,
+    )
+    .join("");
 }
 
 function fillFilterOptions(creators) {
   fillSelect(
     hairColorSelect,
-    uniqueValues(creators.map((creator) => creator.hair?.color)),
+    uniqueValues(creators.map((c) => c.hair?.color)),
     "Hair Color",
   );
 
   fillSelect(
     eyeColorSelect,
-    uniqueValues(creators.map((creator) => creator.eyeColor)),
+    uniqueValues(creators.map((c) => c.eyeColor)),
     "Eye Color",
   );
 
   fillSelect(
     hairTypeSelect,
-    uniqueValues(creators.map((creator) => creator.hair?.type)),
+    uniqueValues(creators.map((c) => c.hair?.type)),
     "Hair Type",
   );
 }
@@ -321,12 +275,6 @@ function clearFilters() {
 
   if (heightRange) heightRange.value = 210;
   if (heightValue) heightValue.textContent = "210 cm";
-
-  if (hairColorSelect) hairColorSelect.value = "";
-  if (eyeColorSelect) eyeColorSelect.value = "";
-  if (hairTypeSelect) hairTypeSelect.value = "";
-  if (weightSelect) weightSelect.value = "";
-  if (locationInput) locationInput.value = "";
 
   render();
 }
