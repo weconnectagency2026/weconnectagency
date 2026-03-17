@@ -1,0 +1,128 @@
+.logo_button {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+  text-decoration: none;
+  color: black;
+  margin-left: 1em;
+  font-size: 30px;
+  margin-right: 0.5em;
+}
+
+.logo_button_del2 {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+  font-size: 40px;
+  display: inline-block;
+  margin-top: 1em;
+}
+
+.top_part1 {
+  font-family: "IBM Plex Mono", monospace;
+  background-color: rgba(242, 238, 237, 1);
+  height: 100vh;
+  margin: -0.5em;
+}
+
+.knap_nav1 {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+  text-decoration: none;
+  color: black;
+  margin-left: 1em;
+  font-size: 18px;
+  margin-right: 0.5em;
+  margin-left: 37em;
+}
+.knap_nav {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+  text-decoration: none;
+  color: black;
+  margin-left: 1em;
+  font-size: 18px;
+  margin-right: 0.5em;
+}
+
+.knap_nav:hover {
+  text-decoration: underline;
+}
+
+.knap_nav1:hover {
+  text-decoration: underline;
+}
+
+/*skrift type */
+.ibm-plex-mono-regular {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ibm-plex-mono-medium {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ibm-plex-mono-semibold {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.ibm-plex-mono-bold {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.ibm-plex-mono-light-italic {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* footer */
+
+#footer_h2 {
+  margin-top: 3em;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+  font-size: 50px;
+}
+
+.footer_flex {
+  display: flex;
+  margin-top: 5em;
+}
+
+#armani_footer,
+#pige_udenfor_footer,
+#ryangosling_footer,
+#flot_fyr_footer,
+#sort_hvid_pige_footer {
+  width: 16%;
+  margin-left: 3em;
+}
+
+.footer_nav {
+  margin-top: 5em;
+  margin-bottom: 2em;
+  text-align: right;
+}
+
+#knap_footer {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  margin-right: 2.3em;
+}
+
+#knap_footer:hover {
+  text-decoration: underline;
+}
