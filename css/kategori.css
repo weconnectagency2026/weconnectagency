@@ -36,86 +36,33 @@ img {
   max-width: 100%;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 button,
 input,
 select {
   font: inherit;
 }
 
-/* =========================
-   Layout
-========================= */
-.page-shell {
-  width: min(1410px, calc(100% - 64px));
-  margin: 46px auto 40px;
+.kategori_page {
   background: var(--surface);
+  min-height: 100vh;
+  margin: 0;
 }
 
-.category-page {
-  padding: 34px 32px 84px;
-}
-
-/* =========================
-   Header
-========================= */
-.site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.kategori_top {
   background: var(--surface-2);
-  padding: 26px 34px;
+  padding: 0.5rem 0 1.2rem 0;
 }
 
-.logo a {
-  display: flex;
-  align-items: center;
-  gap: 14px;
+.kategori_indhold {
+  padding: 2rem 2rem 5rem 2rem;
 }
 
-.logo-light {
-  font-size: 2rem;
-  font-weight: 300;
-  letter-spacing: -0.03em;
+/* filter knap */
+.filter_bar {
+  margin-bottom: 2rem;
 }
 
-.logo-bold {
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-}
-
-.main-nav {
-  display: flex;
-  align-items: center;
-  gap: 42px;
-  font-family: var(--mono);
-  font-size: 0.95rem;
-  letter-spacing: 0.02em;
-}
-
-.main-nav a,
-.site-footer a {
-  transition: opacity 0.18s var(--ease);
-}
-
-.main-nav a:hover,
-.site-footer a:hover {
-  opacity: 0.7;
-}
-
-/* =========================
-   Filter trigger
-========================= */
-.filter-bar {
-  margin-bottom: 28px;
-}
-
-.filter-trigger {
+.filter_trigger {
   border: 0;
   background: transparent;
   padding: 0;
@@ -127,14 +74,12 @@ select {
   transition: opacity 0.18s var(--ease);
 }
 
-.filter-trigger:hover {
+.filter_trigger:hover {
   opacity: 0.7;
 }
 
-/* =========================
-   Creator grid
-========================= */
-.creator-grid {
+/* creator grid */
+.creator_grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
@@ -168,7 +113,7 @@ select {
   transform: scale(1.04);
 }
 
-/* justering af Sophia / id 3 */
+/* justering af Sophia */
 .creator-card[data-id="3"] img {
   object-position: center 20%;
 }
@@ -207,26 +152,18 @@ select {
   font-size: 0.95rem;
 }
 
-/* =========================
-   Top selectors
-========================= */
-.top-selectors {
+/* top selectors */
+.top_selectors {
   margin-top: 130px;
   text-align: center;
 }
 
-.top-selectors h2 {
-  margin: 0 0 48px;
-  font-size: 3rem;
-  font-weight: 300;
-  letter-spacing: -0.04em;
-}
-
-.top-selectors-grid {
+.top_selectors_grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 18px;
   align-items: stretch;
+  margin-top: 3rem;
 }
 
 .top-card {
@@ -240,31 +177,20 @@ select {
   height: 100%;
   object-fit: cover;
 }
-.top-card[data-id="3"] img {
-  object-position: center 20%;
-}
-.top-card[data-id="25"] img {
-  object-position: center 20%;
-}
+
+.top-card[data-id="3"] img,
+.top-card[data-id="25"] img,
 .top-card[data-id="29"] img {
   object-position: center 20%;
 }
-/* =========================
-   Footer
-========================= */
-.site-footer {
-  display: flex;
-  justify-content: flex-end;
-  gap: 46px;
-  padding: 0 32px 28px;
-  font-family: var(--mono);
-  font-size: 0.95rem;
+
+/* footer spacing */
+footer {
+  padding-bottom: 1rem;
 }
 
-/* =========================
-   Filter overlay
-========================= */
-.filter-overlay {
+/* filter overlay */
+.filter_overlay {
   position: fixed;
   inset: 0;
   z-index: 999;
@@ -281,13 +207,13 @@ select {
     visibility 0.25s ease;
 }
 
-.filter-overlay.active {
+.filter_overlay.active {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
 
-.filter-panel {
+.filter_panel {
   width: min(780px, 100%);
   max-height: 92vh;
   overflow: auto;
@@ -296,7 +222,7 @@ select {
   box-shadow: var(--shadow);
 }
 
-.filter-panel-header {
+.filter_panel_header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -304,13 +230,13 @@ select {
   font-family: var(--mono);
 }
 
-.filter-panel-header p,
-.close-btn {
+.filter_panel_header p,
+.close_btn {
   font-size: 1rem;
   letter-spacing: 0.02em;
 }
 
-.close-btn {
+.close_btn {
   border: 0;
   background: transparent;
   padding: 0;
@@ -318,41 +244,39 @@ select {
   transition: opacity 0.18s var(--ease);
 }
 
-.close-btn:hover {
+.close_btn:hover {
   opacity: 0.7;
 }
 
-/* =========================
-   Filter form
-========================= */
-.filter-form {
+/* filter form */
+.filter_form {
   display: flex;
   flex-direction: column;
 }
 
-.filter-group {
+.filter_group {
   padding: 24px 0 34px;
   border-bottom: 1px solid #d4d4d4;
 }
 
-.filter-group h3 {
+.filter_group h3 {
   margin: 0 0 26px;
   font-size: 1.8rem;
   font-weight: 600;
   letter-spacing: -0.03em;
 }
 
-.checkbox-grid {
+.checkbox_grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px 28px;
 }
 
-.checkbox-grid.three-columns {
+.checkbox_grid.three_columns {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.checkbox-grid label {
+.checkbox_grid label {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -360,31 +284,31 @@ select {
   font-size: 0.98rem;
 }
 
-.checkbox-grid input[type="checkbox"] {
+.checkbox_grid input[type="checkbox"] {
   width: 18px;
   height: 18px;
   accent-color: #b3aea8;
 }
 
-.range-wrap,
-.appearance-block {
+.range_wrap,
+.appearance_block {
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
 
-.range-value {
+.range_value {
   align-self: center;
   font-family: var(--mono);
   font-size: 1rem;
 }
 
-.sub-label {
+.sub_label {
   font-family: var(--mono);
   font-size: 0.98rem;
 }
 
-.range-labels {
+.range_labels {
   display: flex;
   justify-content: space-between;
   font-family: var(--mono);
@@ -397,15 +321,15 @@ input[type="range"] {
   cursor: pointer;
 }
 
-.select-grid {
+.select_grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
   margin-top: 24px;
 }
 
-.select-grid select,
-.location-field input {
+.select_grid select,
+.location_field input {
   width: 100%;
   border: 0;
   border-radius: 10px;
@@ -416,18 +340,18 @@ input[type="range"] {
   font-size: 1rem;
 }
 
-.location-field {
+.location_field {
   margin-top: 6px;
 }
 
-.filter-actions {
+.filter_actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 34px;
 }
 
-.link-btn {
+.link_btn {
   border: 0;
   background: transparent;
   padding: 0;
@@ -438,11 +362,11 @@ input[type="range"] {
   transition: opacity 0.18s var(--ease);
 }
 
-.link-btn:hover {
+.link_btn:hover {
   opacity: 0.7;
 }
 
-.results-btn {
+.results_btn {
   min-width: 260px;
   border: 1px solid #cfcfcf;
   background: #f8f8f8;
@@ -456,91 +380,56 @@ input[type="range"] {
     opacity 0.18s var(--ease);
 }
 
-.results-btn:hover {
+.results_btn:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-sm);
 }
 
-/* =========================
-   Responsive
-========================= */
+/* responsive */
 @media (max-width: 1100px) {
-  .main-nav {
-    gap: 24px;
-    font-size: 0.82rem;
-  }
-
-  .top-selectors-grid {
+  .top_selectors_grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 900px) {
-  .page-shell {
-    width: min(100%, calc(100% - 24px));
-    margin-top: 18px;
-  }
-
-  .site-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
-  }
-
-  .main-nav {
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-
-  .creator-grid {
+  .creator_grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .checkbox-grid,
-  .checkbox-grid.three-columns,
-  .select-grid {
+  .checkbox_grid,
+  .checkbox_grid.three_columns,
+  .select_grid {
     grid-template-columns: 1fr;
   }
 
-  .filter-actions {
+  .filter_actions {
     flex-direction: column;
     align-items: stretch;
     gap: 16px;
   }
 
-  .results-btn {
+  .results_btn {
     width: 100%;
     min-width: unset;
   }
 }
 
-@media (max-width: 600px) {
-  .category-page,
-  .site-footer {
-    padding-left: 18px;
-    padding-right: 18px;
+@media (max-width: 700px) {
+  .kategori_indhold {
+    padding: 1.5rem 1rem 4rem 1rem;
   }
 
-  .creator-grid,
-  .top-selectors-grid {
+  .creator_grid,
+  .top_selectors_grid {
     grid-template-columns: 1fr;
   }
 
-  .top-selectors {
+  .top_selectors {
     margin-top: 90px;
   }
 
-  .top-selectors h2 {
-    font-size: 2.2rem;
-  }
-
-  .site-footer {
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 18px;
-  }
-
-  .filter-panel {
+  .filter_panel {
     padding: 20px 18px 28px;
   }
 }
