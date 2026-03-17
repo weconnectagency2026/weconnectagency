@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeConnect Agency | Category</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/kategori.css" />
+    <script src="./kategori.js" defer></script>
+  </head>
+
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="logo">
+          <a href="index.html">
+            <span class="logo-light">WeConnect</span>
+            <span class="logo-bold">AGENCY</span>
+          </a>
+        </div>
+
+        <nav class="main-nav">
+          <a href="#">FIND TALENT</a>
+          <a href="#">OUR VISION</a>
+          <a href="#">CONTACT</a>
+          <a href="#">MENU</a>
+        </nav>
+      </header>
+
+      <main class="category-page">
+        <section class="filter-bar" aria-label="Filter creators">
+          <button
+            class="filter-trigger"
+            id="toggleFilters"
+            type="button"
+            aria-expanded="false"
+            aria-controls="filterOverlay"
+          >
+            FILTER
+          </button>
+        </section>
+
+        <section class="creator-section" aria-label="Creators">
+          <div class="creator-grid" id="creatorGrid"></div>
+        </section>
+
+        <section class="top-selectors" aria-label="Top selectors">
+          <h2>OUR TOP CELECTORS</h2>
+          <div class="top-selectors-grid" id="topSelectorsGrid"></div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <a href="#">CONTACT</a>
+        <a href="#">INSTAGRAM</a>
+        <a href="#">TIKTOK</a>
+      </footer>
+    </div>
+
+    <div class="filter-overlay" id="filterOverlay" aria-hidden="true">
+      <aside
+        class="filter-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="filterTitle"
+      >
+        <div class="filter-panel-header">
+          <p id="filterTitle">FILTER</p>
+          <button
+            id="closeFilterBtn"
+            type="button"
+            class="close-btn"
+            aria-label="Close filter"
+          >
+            CLOSE
+          </button>
+        </div>
+
+        <form id="filterForm" class="filter-form">
+          <section class="filter-group">
+            <h3>Type</h3>
+            <div class="checkbox-grid three-columns">
+              <label
+                ><input type="checkbox" name="type" value="Model" />
+                Model</label
+              >
+              <label
+                ><input type="checkbox" name="type" value="Actor" />
+                Actor</label
+              >
+              <label
+                ><input type="checkbox" name="type" value="Statist" />
+                Statist</label
+              >
+              <label
+                ><input type="checkbox" name="type" value="Creator" />
+                Creator</label
+              >
+              <label
+                ><input type="checkbox" name="type" value="Influencer" />
+                Influencer</label
+              >
+              <label
+                ><input type="checkbox" name="type" value="Extra" />
+                Extra</label
+              >
+            </div>
+          </section>
+
+          <section class="filter-group">
+            <h3>Gender</h3>
+            <div class="checkbox-grid">
+              <label
+                ><input type="checkbox" name="gender" value="female" />
+                Female</label
+              >
+              <label
+                ><input type="checkbox" name="gender" value="male" />
+                Male</label
+              >
+              <label
+                ><input type="checkbox" name="gender" value="non-binary" />
+                Non-binary</label
+              >
+            </div>
+          </section>
+
+          <section class="filter-group">
+            <h3>Age</h3>
+            <div class="range-wrap">
+              <div class="range-value"><span id="ageValue">60</span></div>
+              <input type="range" id="ageRange" min="18" max="60" value="60" />
+            </div>
+          </section>
+
+          <section class="filter-group">
+            <h3>Appearance</h3>
+
+            <div class="appearance-block">
+              <label class="sub-label" for="heightRange">Height</label>
+              <div class="range-labels">
+                <span>150 cm</span>
+                <span id="heightValue">210 cm</span>
+              </div>
+              <input
+                type="range"
+                id="heightRange"
+                min="150"
+                max="210"
+                value="210"
+              />
+            </div>
+
+            <div class="select-grid">
+              <select id="hairColorSelect" aria-label="Hair Color">
+                <option value="">Hair Color</option>
+              </select>
+
+              <select id="eyeColorSelect" aria-label="Eye Color">
+                <option value="">Eye Color</option>
+              </select>
+
+              <select id="hairTypeSelect" aria-label="Hair Type">
+                <option value="">Hair Type</option>
+              </select>
+
+              <select id="weightSelect" aria-label="Weight">
+                <option value="">Weight</option>
+                <option value="50">Up to 50 kg</option>
+                <option value="60">Up to 60 kg</option>
+                <option value="70">Up to 70 kg</option>
+                <option value="80">Up to 80 kg</option>
+                <option value="90">Up to 90 kg</option>
+                <option value="100">Up to 100 kg</option>
+              </select>
+            </div>
+          </section>
+
+          <section class="filter-group">
+            <h3>Location</h3>
+            <div class="location-field">
+              <input
+                type="text"
+                id="locationInput"
+                placeholder="Copenhagen"
+                autocomplete="off"
+              />
+            </div>
+          </section>
+
+          <div class="filter-actions">
+            <button type="button" id="clearFiltersBtn" class="link-btn">
+              Clear All
+            </button>
+            <button type="submit" class="results-btn">Show Results</button>
+          </div>
+        </form>
+      </aside>
+    </div>
+  </body>
+</html>
