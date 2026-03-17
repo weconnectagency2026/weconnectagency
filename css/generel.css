@@ -8,6 +8,13 @@
   margin-right: 0.5em;
 }
 
+.nav {
+  text-align: right;
+  display: block;
+  margin-top: -2em;
+  margin-right: 2em;
+}
+
 .logo_button_del2 {
   font-family: "IBM Plex Mono", monospace;
   font-weight: 500;
