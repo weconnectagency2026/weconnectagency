@@ -1,0 +1,102 @@
+.grid_1 {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 80px;
+  background: rgba(242, 238, 237, 1);
+}
+
+.grid_1 h1 {
+  font-size: 60px;
+  letter-spacing: 4px;
+  line-height: 1.1;
+  font-weight: 300;
+  max-width: 400px;
+}
+
+.grid_1 p {
+  max-width: 400px;
+  margin-top: 20px;
+  color: #000000;
+  font-weight: 300;
+  line-height: 1.7em;
+  font-size: 22px;
+}
+
+/* Billeder */
+.billede_forside,
+.billede_forside2,
+.billede_forside3 {
+  position: absolute;
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.billede_forside {
+  right: 410px;
+  top: 120px;
+  z-index: 2;
+}
+
+.billede_forside2 {
+  right: 190px;
+  top: 80px;
+  z-index: 3;
+}
+
+.billede_forside3 {
+  right: 40px;
+  top: 160px;
+  z-index: 1;
+  width: 220px;
+}
+
+.part2 {
+  height: 80vh;
+}
+
+.tekst1 {
+  font-size: 35px;
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+  margin-left: auto;
+  margin-top: 2em;
+  margin-right: auto;
+  padding: 5em;
+  line-height: 1.5em;
+}
+
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* part 3 */
+
+.part3 {
+  height: 80vh;
+  background-color: rgba(250, 248, 242, 1);
+  padding-top: 5em;
+}
+
+.creative_talent {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 40px;
+  margin-left: 13em;
+}
+
+.p3_1 {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 200;
+  font-size: 27px;
+  font-style: normal;
+  margin-left: 21em;
+}
