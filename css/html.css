@@ -80,7 +80,7 @@
 /* part 3 */
 
 .part3 {
-  height: 80vh;
+  height: 230vh;
   background-color: rgba(250, 248, 242, 1);
   padding-top: 5em;
 }
@@ -99,4 +99,71 @@
   font-size: 27px;
   font-style: normal;
   margin-left: 21em;
+}
+
+.billede_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  margin-left: 6em;
+}
+
+#armani {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  width: 110%;
+}
+
+#sort_hvid_pige {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  width: 110%;
+  margin-left: 5em;
+}
+
+#roodhaaret {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  width: 110%;
+  margin-left: 10em;
+}
+
+#gammel {
+  grid-column: 1/2;
+  grid-row: 2/4;
+  width: 110%;
+  margin-top: 2em;
+}
+
+#flot_fyr {
+  grid-column: 2/3;
+  grid-row: 2;
+  width: 110%;
+  margin-left: 5em;
+  margin-top: 2em;
+}
+
+#pige_udenfor {
+  grid-column: 3/4;
+  grid-row: 2;
+  width: 110%;
+  width: 110%;
+  margin-left: 10em;
+  margin-top: 2em;
+}
+
+#knap_part3 {
+  grid-column: 2/4;
+  grid-row: 3/4;
+  margin-left: 12em;
+  margin-top: 6em;
+  text-decoration: none;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+#knap_part3:hover {
+  text-decoration: underline;
 }
