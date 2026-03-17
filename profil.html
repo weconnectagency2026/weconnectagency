@@ -1,110 +1,179 @@
 <!doctype html>
-<html lang="en">
+<html lang="da">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profil</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/generel.css" />
     <link rel="stylesheet" href="css/profil.css" />
+
+    <title>WeConnect Agency | Profile</title>
     <script src="profil.js" defer></script>
   </head>
+
   <body>
     <main class="profile-page">
-      <p class="breadcrumb">
-        Home / Talent / <span id="breadcrumb-name"></span>
-      </p>
+      <section class="profil_top">
+        <nav>
+          <a href="index.html" class="logo_button">WeConnect</a>
+          <a href="index.html" class="logo_button_del2">AGENCY</a>
 
-      <h1 id="name"></h1>
-
-      <!-- TOP GRID -->
-      <section class="top-grid">
-        <div class="hero-image">
-          <img src="images/image1.webp" alt="Emily main portrait" />
-        </div>
-
-        <div class="details-box">
-          <h2>Details</h2>
-
-          <div class="info-list">
-            <p><strong>Age:</strong> <span id="age"></span></p>
-            <p><strong>Gender:</strong> <span id="gender"></span></p>
-            <p><strong>Height:</strong> <span id="height"></span></p>
-            <p><strong>Weight:</strong> <span id="weight"></span></p>
-            <p><strong>Eye color:</strong> <span id="eyeColor"></span></p>
-            <p><strong>Hair color:</strong> <span id="hairColor"></span></p>
-            <p><strong>Hair type:</strong> <span id="hairType"></span></p>
-          </div>
-        </div>
-
-        <div class="location-box">
-          <h2>Located</h2>
-
-          <div class="info-list">
-            <p><strong>City:</strong> <span id="city"></span></p>
-            <p><strong>State:</strong> <span id="state"></span></p>
-            <p><strong>Country:</strong> <span id="country"></span></p>
-          </div>
-        </div>
-
-        <div class="side-portrait">
-          <img src="images/image1.2.webp" alt="Emily portrait" />
-        </div>
+          <a href="kategori.html" class="knap_nav1">FIND TALENT</a>
+          <a href="kategori.html" class="knap_nav">OUR VISION</a>
+          <a href="kategori.html" class="knap_nav">CONTACT</a>
+        </nav>
       </section>
 
-      <!-- FULL WIDTH IMAGE -->
-      <section class="wide-image">
-        <img src="images/image1.3.webp" alt="Emily campaign photo" />
-      </section>
-
-      <!-- BOTTOM GRID -->
-      <section class="bottom-grid">
-        <div class="street-image">
-          <img src="images/image1.4.webp" alt="Emily street photo" />
-        </div>
-
-        <div class="experience-box">
-          <h2>Experience</h2>
-          <p class="subheading">Education &amp; Work</p>
-
-          <div class="info-list">
-            <p><strong>University:</strong> <span id="university"></span></p>
-            <p><strong>Position:</strong> <span id="position"></span></p>
-            <p><strong>Department:</strong> <span id="department"></span></p>
-            <p><strong>Company:</strong> <span id="company"></span></p>
-          </div>
-        </div>
-
-        <div class="closeup-image">
-          <img src="images/image1.5.webp" alt="Emily closeup portrait" />
-        </div>
-      </section>
-
-      <!-- ABOUT -->
-      <section class="about-section">
-        <h2 class="about-title">About:</h2>
-
-        <p id="aboutText" class="about-text"></p>
-
-        <p class="about-note">
-          - For more information about Emily’s experience or availability,
-          please contact her directly.
+      <section class="profile-content">
+        <p class="breadcrumb">
+          Home / Talent / <span id="breadcrumb-name"></span>
         </p>
+
+        <h1 id="name"></h1>
+
+        <section class="top-grid">
+          <div class="hero-image">
+            <img src="images/image1.webp" alt="Emily main portrait" />
+          </div>
+
+          <div class="details-box">
+            <h2>Details</h2>
+
+            <div class="info-list">
+              <p><strong>Age:</strong> <span id="age"></span></p>
+              <p><strong>Gender:</strong> <span id="gender"></span></p>
+              <p><strong>Height:</strong> <span id="height"></span></p>
+              <p><strong>Weight:</strong> <span id="weight"></span></p>
+              <p><strong>Eye color:</strong> <span id="eyeColor"></span></p>
+              <p><strong>Hair color:</strong> <span id="hairColor"></span></p>
+              <p><strong>Hair type:</strong> <span id="hairType"></span></p>
+            </div>
+          </div>
+
+          <div class="location-box">
+            <h2>Located</h2>
+
+            <div class="info-list">
+              <p><strong>City:</strong> <span id="city"></span></p>
+              <p><strong>State:</strong> <span id="state"></span></p>
+              <p><strong>Country:</strong> <span id="country"></span></p>
+            </div>
+          </div>
+
+          <div class="side-portrait">
+            <img src="images/image1.2.webp" alt="Emily portrait" />
+          </div>
+        </section>
+
+        <section class="wide-image">
+          <img src="images/image1.3.webp" alt="Emily campaign photo" />
+        </section>
+
+        <section class="bottom-grid">
+          <div class="street-image">
+            <img src="images/image1.4.webp" alt="Emily street photo" />
+          </div>
+
+          <div class="experience-box">
+            <h2>Experience</h2>
+            <p class="subheading">Education &amp; Work</p>
+
+            <div class="info-list">
+              <p><strong>University:</strong> <span id="university"></span></p>
+              <p><strong>Position:</strong> <span id="position"></span></p>
+              <p><strong>Department:</strong> <span id="department"></span></p>
+              <p><strong>Company:</strong> <span id="company"></span></p>
+            </div>
+          </div>
+
+          <div class="closeup-image">
+            <img src="images/image1.5.webp" alt="Emily closeup portrait" />
+          </div>
+        </section>
+
+        <section class="about-section">
+          <h2 class="about-title">About:</h2>
+
+          <p id="aboutText" class="about-text"></p>
+
+          <p class="about-note">
+            - For more information about Emily’s experience or availability,
+            please contact her directly.
+          </p>
+        </section>
+
+        <section class="contact-section">
+          <h2>Contact / Book</h2>
+
+          <div class="contact-row">
+            <div class="contact-info info-list">
+              <p><strong>Email:</strong> <span id="email"></span></p>
+              <p><strong>Phone:</strong> <span id="phone"></span></p>
+            </div>
+
+            <div class="contact-button-wrap">
+              <button type="button" class="book-button">
+                Book This Creator
+              </button>
+            </div>
+          </div>
+        </section>
       </section>
 
-      <!-- CONTACT -->
-      <section class="contact-section">
-        <h2>Contact / Book</h2>
-
-        <div class="contact-row">
-          <div class="contact-info info-list">
-            <p><strong>Email:</strong> <span id="email"></span></p>
-            <p><strong>Phone:</strong> <span id="phone"></span></p>
-          </div>
-
-          <div class="contact-button-wrap">
-            <button type="button" class="book-button">Book This Creator</button>
-          </div>
+      <footer>
+        <h2 id="footer_h2">OUR TOP CELECTORS</h2>
+        <div class="footer_flex">
+          <img
+            src="images/image29.webp"
+            id="flot_fyr_footer"
+            alt="Top selector"
+          />
+          <img
+            src="images/image15.webp"
+            id="ryangosling_footer"
+            alt="Top selector"
+          />
+          <img
+            src="images/image27.webp"
+            id="armani_footer"
+            alt="Top selector"
+          />
+          <img
+            src="images/image1.webp"
+            id="pige_udenfor_footer"
+            alt="Top selector"
+          />
+          <img
+            src="images/image26.webp"
+            id="sort_hvid_pige_footer"
+            alt="Top selector"
+          />
         </div>
-      </section>
+        <div class="footer_nav">
+          <a href="kategori.html" id="knap_footer">CONTACT</a>
+          <a href="kategori.html" id="knap_footer">INSTAGRAM</a>
+          <a href="kategori.html" id="knap_footer">TIKTOK</a>
+        </div>
+      </footer>
     </main>
   </body>
 </html>

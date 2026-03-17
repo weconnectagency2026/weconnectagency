@@ -1,4 +1,3 @@
-/* FONT + COLOR SETTINGS */
 :root {
   --bg-color: #f3f3f3;
   --text-color: #111111;
@@ -9,14 +8,7 @@
   --font-body: "Courier New", Courier, monospace;
   --font-light: "Helvetica Neue", Arial, sans-serif;
 
-  --page-max-width: 1240px;
   --page-side-padding: 18px;
-
-  --space-1: 14px;
-  --space-2: 24px;
-  --space-3: 36px;
-  --space-4: 48px;
-  --space-5: 64px;
 }
 
 * {
@@ -33,16 +25,31 @@ body {
   color: var(--text-color);
 }
 
-/* PAGE WRAPPER */
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.profil_top {
+  background-color: rgba(242, 238, 237, 1);
+  padding-bottom: 1.5rem;
+}
+
 .profile-page {
   width: 100%;
   margin: 0;
+  background: var(--bg-color);
+}
+
+.profile-content {
   padding-left: var(--page-side-padding);
   padding-right: var(--page-side-padding);
   padding-top: 58px;
   padding-bottom: 56px;
 }
-/* TYPOGRAPHY */
+
 .breadcrumb {
   margin: 0 0 28px;
   font-family: var(--font-body);
@@ -97,15 +104,7 @@ h2 {
   margin-top: 2px;
 }
 
-/* IMAGES */
-img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-/* TOP GRID*/
+/* top grid */
 .top-grid {
   display: grid;
   grid-template-columns: 58% 42%;
@@ -122,6 +121,9 @@ img {
   grid-area: hero;
   min-height: 510px;
   overflow: hidden;
+}
+
+.hero-image img {
   object-position: top;
 }
 
@@ -137,6 +139,11 @@ img {
   padding-left: 12px;
   margin-top: 60px;
 }
+
+.side-portrait {
+  grid-area: portrait;
+}
+
 .side-portrait img {
   width: 100%;
   height: 900px;
@@ -147,15 +154,16 @@ img {
   padding-right: 24px;
 }
 
-/* WIDE IMAGE */
+/* wide image */
 .wide-image img {
   width: 100%;
-  height: 820px; /* justér højden */
-  object-fit: cover; /* beskærer billedet */
-  object-position: top; /* skærer fra bunden */
+  height: 820px;
+  object-fit: cover;
+  object-position: top;
   display: block;
 }
-/* BOTTOM GRID */
+
+/* bottom grid */
 .bottom-grid {
   display: grid;
   grid-template-columns: 45% 55%;
@@ -190,7 +198,7 @@ img {
   padding-right: 24px;
 }
 
-/* ABOUT */
+/* about */
 .about-section {
   margin-bottom: 42px;
 }
@@ -213,7 +221,7 @@ img {
   padding-left: 36px;
 }
 
-/* CONTACT */
+/* contact */
 .contact-section h2 {
   margin-bottom: 30px;
 }
@@ -245,10 +253,14 @@ img {
   text-decoration: underline;
 }
 
-/* RESPONSIVE */
+/* footer spacing on this page */
+footer {
+  padding-bottom: 1rem;
+}
+
+/* responsive */
 @media (max-width: 1100px) {
-  .profile-page {
-    width: calc(100vw - 40px);
+  .profile-content {
     padding-top: 40px;
   }
 
@@ -269,18 +281,21 @@ img {
     grid-area: auto;
   }
 
-  .hero-image,
-  .side-portrait,
-  .wide-image,
-  .street-image,
-  .closeup-image {
-    min-height: auto;
-  }
-
   .details-box,
   .location-box,
   .experience-box {
     padding: 0;
+    margin-top: 0;
+  }
+
+  .side-portrait img {
+    height: auto;
+    margin-top: 0;
+    padding-right: 0;
+  }
+
+  .wide-image img {
+    height: auto;
   }
 
   .contact-button-wrap {
@@ -290,5 +305,23 @@ img {
 
   .book-button {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .profile-content {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .wide-image img,
+  .hero-image img,
+  .street-image img,
+  .closeup-image img {
+    height: auto;
+  }
+
+  .about-note {
+    padding-left: 0;
   }
 }
