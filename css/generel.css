@@ -1,18 +1,22 @@
+nav {
+  display: flex;
+  align-items: center;
+  padding: 1em 2em;
+  position: relative;
+}
+
+.top_part1 {
+  background-color: rgba(242, 239, 237, 1);
+  height: fit-content;
+}
+
 .logo_button {
   font-family: "IBM Plex Mono", monospace;
   font-weight: 300;
   text-decoration: none;
   color: black;
-  margin-left: 1em;
   font-size: 30px;
   margin-right: 0.5em;
-}
-
-.nav {
-  text-align: right;
-  display: block;
-  margin-top: -2em;
-  margin-right: 2em;
 }
 
 .logo_button_del2 {
@@ -21,43 +25,64 @@
   text-decoration: none;
   color: black;
   font-size: 40px;
-  display: inline-block;
-  margin-top: 1em;
+  margin-right: auto;
 }
 
-.top_part1 {
-  font-family: "IBM Plex Mono", monospace;
-  background-color: rgba(242, 238, 237, 1);
-  height: 100vh;
-  margin: -0.5em;
+.nav {
+  display: flex;
+  gap: 3em;
+  margin-left: auto;
 }
 
+.knap_nav,
 .knap_nav1 {
   font-family: "IBM Plex Mono", monospace;
   font-weight: 300;
   text-decoration: none;
   color: black;
-  margin-left: 1em;
   font-size: 18px;
-  margin-right: 0.5em;
-  margin-left: 37em;
-}
-.knap_nav {
-  font-family: "IBM Plex Mono", monospace;
-  font-weight: 300;
-  text-decoration: none;
-  color: black;
-  margin-left: 1em;
-  font-size: 18px;
-  margin-right: 0.5em;
 }
 
-.knap_nav:hover {
-  text-decoration: underline;
-}
-
+.knap_nav:hover,
 .knap_nav1:hover {
   text-decoration: underline;
+}
+
+/* Burger */
+.burger {
+  display: none;
+  font-size: 30px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+/* Mobil */
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .nav {
+    display: none; /* skjul menu som default på mobil */
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: white;
+    width: 200px;
+    padding: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+  }
+
+  .nav.active {
+    display: flex !important; /* !important sikrer, at JS kan overstyre gamle regler */
+  }
+
+  .nav a {
+    margin: 1em 0;
+    color: black;
+  }
 }
 
 /*skrift type */

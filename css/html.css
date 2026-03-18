@@ -15,6 +15,21 @@
   max-width: 400px;
 }
 
+h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+}
+
+p {
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+}
+
+.top_part1 {
+  background-color: rgba(242, 239, 237, 1);
+  height: 110vh;
+}
+
 .grid_1 p {
   max-width: 400px;
   margin-top: 20px;
@@ -51,9 +66,8 @@
   right: 40px;
   top: 160px;
   z-index: 1;
-  width: 220px;
+  width: 16%;
 }
-
 .part2 {
   height: 80vh;
 }
@@ -80,7 +94,7 @@
 /* part 3 */
 
 .part3 {
-  height: 250vh;
+  height: fit-content;
   background-color: rgba(250, 248, 242, 1);
   padding-top: 5em;
 }
@@ -105,7 +119,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2em;
-  margin-left: 6em;
   grid-auto-flow: dense;
 }
 
@@ -211,4 +224,17 @@
 
 #knap_part3:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  .grid_1 {
+    display: block; /* skifter fra flex til block */
+  }
+
+  .grid_1 img {
+    width: 80%; /* billederne fylder 80% af skærmen */
+    max-width: 300px; /* maks størrelse, så de ikke bliver gigantiske */
+    margin: 30em auto; /* centreret med lidt afstand */
+    display: block;
+  }
 }
